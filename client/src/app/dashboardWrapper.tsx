@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect } from "react";
 import Navbar from "@/app/(components)/Navbar";
 import Sidebar from "@/app/(components)/Sidebar";
@@ -22,7 +24,8 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
       <Sidebar />
       <main
         className={`flex w-full flex-col bg-gray-50 dark:bg-dark-bg ${
-          isSidebarCollapsed ? "" : "md:pl-64"}`}
+          isSidebarCollapsed ? "" : "md:pl-64"
+        }`}
       >
         <Navbar />
         {children}
