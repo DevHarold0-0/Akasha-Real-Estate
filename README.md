@@ -1,5 +1,5 @@
 # Features
-A complete full stack project management application with Next.js as the frontend, Nodejs as the backend and deployed on AWS. Cognito authentication will be used to fascilitate user authentication, admin authentication and serve emails.
+A complete full stack project management application with Next.js as the frontend, Nodejs as the backend and deployed on AWS. Cognito authentication used to fascilitate user authentication, admin authentication and serve emails.
 
 Redux toolkit for statemangement library
 
