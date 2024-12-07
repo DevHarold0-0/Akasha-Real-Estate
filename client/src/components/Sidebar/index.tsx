@@ -2,6 +2,7 @@
 
 import { useAppDispatch, useAppSelector } from "@/app/redux";
 import { setIsSidebarCollapsed } from "@/state";
+import { useGetProjectsQuery } from "@/state/api";
 import {
   AlertCircle,
   AlertOctagon,
@@ -10,7 +11,6 @@ import {
   ChevronDown,
   ChevronUp,
   Home,
-  Icon,
   Layers3,
   LockIcon,
   LucideIcon,
@@ -30,9 +30,10 @@ const Sidebar = () => {
   const [showProjects, setShowProjects] = useState(true);
   const [showPriority, setShowPriority] = useState(true);
 
+  const { data: projects } = useGetProjectsQuery();
   const dispatch = useAppDispatch();
   const isSidebarCollapsed = useAppSelector(
-    (state) => state.global.isSidebarCollapsed,
+    (state) => state.global.isSidebarCollapsed
   );
 
   const sidebarClassNames = `fixed flex flex-col h-[100%] justify-between shadow-xl 
@@ -95,6 +96,15 @@ const Sidebar = () => {
           )}
         </button>
         {/* PROJECTS LIST*/}
+        {showProjects &&
+          projects?.map((project) => (
+            <SidebarLink
+              key={project.id}
+              icon={Briefcase}
+              label={project.name}
+              href={`/projects/${project.id}`}
+            />
+          ))}
 
         {/* PRIORITIES LINKS */}
         <button
