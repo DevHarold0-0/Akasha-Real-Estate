@@ -1,5 +1,5 @@
 module.exports = {
-  app: [
+  apps: [
     {
       name: "project-management",
       script: "npm",
