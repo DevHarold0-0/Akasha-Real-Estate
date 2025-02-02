@@ -1,5 +1,5 @@
 # Features
-A complete full stack project management application with Next.js as the frontend, Nodejs as the backend and deployed on AWS. Cognito authentication used to fascilitate user authentication, admin authentication and serve emails. Redux toolkit for statemangement.
+Project management application with Next.js as the frontend, Nodejs as the backend and deployed on AWS. Cognito authentication used to fascilitate user authentication, admin authentication and serve emails. Redux toolkit for statemangement.
 
 
 # Frontend 
@@ -17,8 +17,7 @@ A complete full stack project management application with Next.js as the fronten
 - Prisma: Manage interaction w/ Postgress SQL database
 
 
-# AWS 
-For infinitly scalablity
+# AWS (Scalability)
 - EC2: Hosting backend
 - Real Time Series (RTS) AWS: Post SQL database
 - Amplify AWS: Hosting Next.js 
